@@ -1,4 +1,4 @@
-name: Deploy profile site
+name: Deploy profile site on github pages
 
 on:
   push:
