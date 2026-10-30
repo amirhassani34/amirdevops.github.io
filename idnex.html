@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Aamir Hassan | Portfolio</title>
+<meta name="description" content="Muhammad Aamir Hassan's portfolio: DevOps, cloud and infrastructure engineering projects, skills, certifications and contact.">
+<meta property="og:title" content="Muhammad Aamir Hassan | Portfolio">
+<meta property="og:description" content="DevOps, cloud and infrastructure engineer. AWS Certified Solutions Architect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14171C;--panel:#1B1F26;--line:#2E343E;--text:#ECEEF1;--mute:#98A1AE;--acc:#8FA8FF;--warm:#F2B57A}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font:400 16.5px/1.65 Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header.bar{position:sticky;top:0;z-index:20;background:rgba(20,23,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 1.15rem Syne,sans-serif;text-decoration:none;letter-spacing:.04em}
+.menu{display:flex;gap:6px;list-style:none;padding:0;align-items:center}
+.menu>li{position:relative}
+.menu>li>a,.menu>li>button{background:none;border:0;color:var(--text);font:500 .95rem Manrope,sans-serif;padding:10px 12px;text-decoration:none;cursor:pointer;border-radius:6px}
+.menu>li>a:hover,.menu>li>button:hover{background:var(--panel)}
+.drop{display:none;position:absolute;top:100%;left:0;min-width:190px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px;list-style:none}
+.menu li:hover .drop,.menu li:focus-within .drop{display:block}
+.drop a{display:block;padding:8px 12px;text-decoration:none;border-radius:5px;color:var(--mute)}
+.drop a:hover{background:var(--bg);color:var(--text)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;padding:88px 0 72px}
+.hero small{color:var(--mute);display:block;margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.6rem);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{color:transparent;-webkit-text-stroke:1.5px var(--text)}
+.hero h2{font:500 1.35rem Manrope,sans-serif;color:var(--acc);margin:22px 0 28px;letter-spacing:.02em}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:999px;border:1.5px solid var(--text);text-decoration:none;font-weight:500}
+.btn.fill{background:var(--text);color:var(--bg)}
+.btn:hover{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+.status{margin-top:26px;color:var(--mute);font-size:.95rem}
+.status::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#5BD68A;margin-right:10px}
+.mono{aspect-ratio:4/5;border-radius:14px;background:linear-gradient(160deg,#2A303A,#14171C);border:1px solid var(--line);display:grid;place-items:center;filter:grayscale(1);position:relative;overflow:hidden}
+.mono b{font:800 6rem Syne,sans-serif;letter-spacing:-.04em;opacity:.9}
+.mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+section{padding:80px 0 0}
+.head{margin-bottom:34px}
+.head h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:800}
+.head p{color:var(--mute);margin-top:8px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about p{margin-bottom:16px;max-width:62ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chips span{font-size:.85rem;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--mute)}
+.chips.hl span{border-color:var(--acc);color:var(--acc)}
+dl{border-top:1px solid var(--line)}
+dl div{padding:14px 0;border-bottom:1px solid var(--line)}
+dt{color:var(--mute);font-size:.85rem}
+dd{margin:0}
+.exp{display:grid;grid-template-columns:200px 1fr;gap:10px 32px;padding:30px 0;border-top:1px solid var(--line)}
+.exp time{color:var(--warm);font-weight:500}
+.exp h3{font-size:1.5rem}
+.exp .org{color:var(--mute);margin:4px 0 12px}
+.exp ul{padding-left:18px;max-width:72ch}
+.exp li{margin-bottom:7px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:1.25rem}
+.card p{color:var(--mute);font-size:.97rem}
+.card .chips{margin-top:auto}
+.card .tag{font-size:.8rem;color:var(--warm);font-weight:500}
+.edu{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.edu h3{font-size:1.3rem}
+.edu p{color:var(--mute)}
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:0;border-left:1px solid var(--line)}
+.sk{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+.sk h3{font-size:1.1rem;margin-bottom:10px}
+.sk p{color:var(--mute)}
+.certs{list-style:none;padding:0}
+.certs li{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.certs li:first-child{border-top:0}
+.certs strong{font-weight:700}
+.certs.main li:first-child strong{color:var(--acc)}
+.certs span{color:var(--mute)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.links a{display:block;padding:22px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--panel)}
+.links a:hover{border-color:var(--acc)}
+.links small{display:block;color:var(--mute)}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:24px 0;color:var(--mute);font-size:.9rem}
+@media(max-width:820px){.hero,.about{grid-template-columns:1fr}.exp{grid-template-columns:1fr}.mono{max-width:260px}.menu>li>a,.menu>li>button{padding:8px}.logo{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+<a class="logo" href="#top">AAMIR</a>
+<ul class="menu">
+ <li><button aria-haspopup="true">About</button><ul class="drop"><li><a href="#about">Overview</a></li><li><a href="#experience">Experience</a></li></ul></li>
+ <li><button aria-haspopup="true">Skills</button><ul class="drop"><li><a href="#skills">Technical skills</a></li><li><a href="#certifications">Certifications</a></li></ul></li>
+ <li><a href="#projects">Projects</a></li>
+ <li><a href="#contact">Contact</a></li>
+</ul></div></header>
+
+<main id="top" class="wrap">
+<div class="hero">
+ <div>
+  <small>Portfolio</small>
+  <h1>Muhammad <span>Aamir</span> Hassan</h1>
+  <h2>Cloud · DevOps · Infrastructure</h2>
+  <div class="btns"><a class="btn fill" href="#projects">View projects</a><a class="btn" href="#contact">Contact</a><a class="btn" href="https://linkedin.com/in/mamirhassani34">LinkedIn</a></div>
+  <p class="status">Based in Pakistan. Open to opportunities.</p>
+ </div>
+ <div class="mono" aria-label="Portrait"><b>MAH</b><img src="photo.jpg" alt="Muhammad Aamir Hassan" onerror="this.remove()"></div>
+</div>
+
+<section id="about"><div class="head"><h2>About</h2><p>Reliable infrastructure, from on-premises racks to the cloud.</p></div>
+<div class="about">
+ <div>
+  <p>AWS Certified Solutions Architect with 10+ years in infrastructure, virtualization, cloud connectivity and automation. I own the on-premises platform at Punjab Higher Education Commission (Proxmox, VMware, Sangfor) and deploy its locally hosted portals, including the Honhaar Scholarship portal and app.</p>
+  <p>I work with Docker, Ansible, Terraform, Python, Bash and Zabbix, and I am building Kubernetes and CI/CD depth through home-lab practice.</p>
+  <div class="chips hl"><span>Infrastructure</span><span>Cloud</span><span>DevOps</span><span>AWS Certified</span></div>
+ </div>
+ <dl>
+  <div><dt>Primary focus</dt><dd>Infrastructure, virtualization and automation</dd></div>
+  <div><dt>Current role</dt><dd>Software Developer Infrastructure, PHEC</dd></div>
+  <div><dt>Credentials</dt><dd>AWS Solutions Architect Associate, CCNP, CCNA, HCNA, MCSA</dd></div>
+  <div><dt>Location</dt><dd>Faisalabad, Pakistan</dd></div>
+ </dl>
+</div></section>
+
+<section id="experience"><div class="head"><h2>Experience</h2><p>Infrastructure, networking and cloud roles since 2012.</p></div>
+<article class="exp"><time>Jul 2026 – Present</time><div><h3>Software Developer Infrastructure</h3><p class="org">Punjab Higher Education Commission, Lahore</p><ul>
+<li>Own the overall IT infrastructure: Proxmox and VMware virtualization, Sangfor firewall and network security, and all locally deployed web portals.</li>
+<li>Led deployment of the Honhaar Scholarship portal and mobile app, from hosting and environment setup to go-live and operations.</li>
+<li>Digitise paperless environments for departments, moving manual workflows onto hosted, secured web platforms.</li></ul></div></article>
+<article class="exp"><time>Mar 2016 – Jun 2026</time><div><h3>Network &amp; Infrastructure Engineer</h3><p class="org">University of Agriculture, Faisalabad</p><ul>
+<li>Refactored a legacy web portal into Docker-based microservices with CI/CD-style deployment.</li>
+<li>Automated configuration management and change validation with Ansible and Python, reducing manual errors.</li>
+<li>Deployed Zabbix monitoring 100+ nodes, sustaining 99.9% uptime for 4,000+ users; administered a Linux-based LMS for 5,000+ users.</li>
+<li>Built hybrid connectivity to Azure (VPN gateways, NSGs, Azure AD) and designed site-to-site VPNs between datacenters.</li>
+<li>Ran VMware and Hyper-V with automated backups; managed a Huawei USG 6660 UTM firewall.</li>
+<li>Led HEC/ICT-funded campus modernization and deployed 617 Cisco access points with automated provisioning and self-service password reset.</li></ul></div></article>
+<article class="exp"><time>Jun 2014 – Feb 2016</time><div><h3>Network Engineer</h3><p class="org">Waves Computer LLC, Abu Dhabi, UAE</p><ul>
+<li>Deployed FortiGate firewalls (site-to-site and SSL VPN), Cisco wireless controllers and Layer 2/3 switching for multiple client environments.</li></ul></div></article>
+<article class="exp"><time>May 2012 – Feb 2014</time><div><h3>Field Support Engineer</h3><p class="org">Comsats Internet Service Provider, Pakistan</p><ul>
+<li>Implemented, monitored and troubleshot VLAN, VTP, STP and EtherChannel services across POP sites using Orion NMS.</li></ul></div></article>
+</section>
+
+<section><div class="head"><h2>Qualifications</h2></div>
+<div class="edu"><div><h3>Bachelor of Science, Computer Science</h3><p>University of Engineering and Technology (UET), Lahore</p></div><p>2010</p></div></section>
+
+<section id="skills"><div class="head"><h2>Technical expertise</h2><p>Cloud, infrastructure, automation and delivery.</p></div>
+<div class="skillgrid">
+ <div class="sk"><h3>Cloud</h3><p>AWS: EC2, S3, VPC, IAM, Route 53, CloudFormation, CloudWatch. Azure: Azure AD, hybrid VPN, NSGs.</p></div>
+ <div class="sk"><h3>Containers</h3><p>Docker, Docker Engine, microservices migration. Kubernetes fundamentals; Helm and Operators in progress.</p></div>
+ <div class="sk"><h3>Automation &amp; IaC</h3><p>Ansible · Terraform · CloudFormation · Python · Bash · PowerShell</p></div>
+ <div class="sk"><h3>CI/CD</h3><p>Container deployments · GitHub Actions · Jenkins (home lab)</p></div>
+ <div class="sk"><h3>Virtualization &amp; hosting</h3><p>Proxmox · VMware ESXi · Hyper-V · Linux · Windows Server · on-prem web hosting</p></div>
+ <div class="sk"><h3>Monitoring</h3><p>Zabbix · CloudWatch · Orion NMS · proactive anomaly detection</p></div>
+ <div class="sk"><h3>Networking &amp; security</h3><p>Sangfor · Huawei USG · Fortinet · Cisco/Huawei switching · site-to-site VPN · VLAN · QoS · MFA</p></div>
+</div></section>
+
+<section id="projects"><div class="head"><h2>Projects</h2><p>Selected work from my infrastructure roles.</p></div>
+<div class="grid">
+ <div class="card"><span class="tag">Project</span><h3>Honhaar Scholarship Portal &amp; App</h3><p>Led the deployment of the scholarship portal and mobile app, from hosting and environment setup to go-live and ongoing operations.</p><div class="chips"><span>Proxmox</span><span>Linux</span><span>Sangfor</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Legacy Portal to Docker Microservices</h3><p>Refactored a legacy web portal into containers, enabling CI/CD-style deployment and better resource use.</p><div class="chips"><span>Docker</span><span>CI/CD</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Network Monitoring with Zabbix</h3><p>Monitored 100+ nodes and sustained 99.9% uptime for 4,000+ users.</p><div class="chips"><span>Zabbix</span><span>Monitoring</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Hybrid Azure Connectivity</h3><p>Secure VPN gateways, NSGs and Azure AD between campus and Azure, plus site-to-site VPN design between datacenters.</p><div class="chips"><span>Azure</span><span>VPN</span><span>NSG</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Config Automation</h3><p>Automated configuration management and change validation across enterprise network infrastructure.</p><div class="chips"><span>Ansible</span><span>Python</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Campus Modernization</h3><p>HEC/ICT-funded rollout of fiber, Huawei core switching, UTM and 617 Cisco access points with self-service password reset.</p><div class="chips"><span>Huawei</span><span>Cisco</span><span>Wi-Fi</span></div></div>
+ <div class="card"><span class="tag">Project</span><h3>Paperless Digitisation</h3><p>Moved departmental manual workflows onto hosted, secured web platforms.</p><div class="chips"><span>Web hosting</span><span>Security</span></div></div>
+ <div class="card"><span class="tag">Home lab</span><h3>Kubernetes &amp; Pipelines</h3><p>Helm chart authoring, Operators, multi-node clusters, and Jenkins and GitHub Actions pipelines, including the one that deploys this site.</p><div class="chips"><span>Kubernetes</span><span>Helm</span><span>GitHub Actions</span></div></div>
+</div></section>
+
+<section id="certifications"><div class="head"><h2>Certifications</h2><p>Credentials behind the cloud and networking work.</p></div>
+<ul class="certs main">
+ <li><strong>AWS Certified Solutions Architect – Associate (SAA-C03)</strong><span>Amazon Web Services</span></li>
+ <li><strong>Cisco Certified Network Professional – Route &amp; Switch</strong><span>Cisco</span></li>
+ <li><strong>Cisco Certified Network Associate</strong><span>Cisco</span></li>
+ <li><strong>Huawei Certified Network Associate</strong><span>Huawei</span></li>
+ <li><strong>Microsoft Certified Solutions Associate (70-410, 70-411)</strong><span>Microsoft</span></li>
+</ul></section>
+
+<section id="contact"><div class="head"><h2>Contact</h2><p>The fastest way to reach me is email or LinkedIn.</p></div>
+<div class="links">
+ <a href="mailto:amirhassani34@gmail.com"><small>Email</small>amirhassani34@gmail.com</a>
+ <a href="https://linkedin.com/in/mamirhassani34"><small>LinkedIn</small>linkedin.com/in/mamirhassani34</a>
+ <a href="https://github.com/"><small>GitHub</small>github.com/YOUR_USERNAME</a>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Muhammad Aamir Hassan. Built with GitHub Actions and GitHub Pages.</div></footer>
+</body>
+</html>
